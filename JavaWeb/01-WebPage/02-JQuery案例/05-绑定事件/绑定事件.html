@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.0.0.min.js"></script>
+    <script>
+        $(function () {
+
+            /*绑定事件1*/
+            /*$("#name").click(function () {
+                alert("绑定事件1")
+            })*/
+
+            /*绑定事件2*/
+            /*$("#name").mouseover(function () {
+                alert("鼠标来了")
+            })
+            $("#name").mouseout(function () {
+                alert("鼠标离开")
+            })*/
+
+            /*绑定事件3*/
+            /*$("#name").mouseover(function () {
+                alert("鼠标来了")
+            }).mouseout(function () {
+                alert("鼠标离开")
+            })*/
+
+            /*绑定事件4*/
+            /*$("#name").on("click",function () {
+                alert("绑定")
+            })
+
+            $("#name1").click(function () {
+                $("#name").off("click")
+            })*/
+
+            /*绑定事件5*/
+            $("#btn").toggle(function () {
+                $("#myDiv").css("backgroundColor","green")
+            },function () {
+                $("#myDiv").css("backgroundColor","pink")
+            })
+        })
+
+    </script>
+</head>
+<body>
+
+<input id="name" type="button" value="绑定单击事件1">
+<input id="name1" type="button" value="绑定单击事件2">
+<input id="btn" type="button" value="事件切换">
+<div id="myDiv" style="width: 200px;height: 200px;background: pink">
+    点击变红色,再点变黄色
+</div>
+</body>
+</html>

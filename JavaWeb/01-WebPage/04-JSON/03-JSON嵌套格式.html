@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        /*本质是数组,内部存储json对象*/
+        var person = [
+            {"name":"aaa","age":22},
+            {"name":"bbb","age":22},
+            {"name":"ccc","age":22}
+        ]
+
+        /*获取值*/
+        var name = person[2].name;
+        alert(name)
+
+        /*遍历,获取所有的键和值*/
+        for(var i = 0;i < person.length; i ++){
+            var p = person[i]
+            for(var key in p){
+                alert(key + ":"+p[key])
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

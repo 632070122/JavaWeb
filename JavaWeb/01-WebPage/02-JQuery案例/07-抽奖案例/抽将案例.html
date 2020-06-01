@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <script>
+        var imgs = ["img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg", "img/5.jpg", "img/6.jpg", "img/7.jpg", "img/8.jpg"];
+        var startId;
+        var index;
+        $(function () {
+
+            $("#startID").prop("disabled",false);
+            $("#stopID").prop("disabled",true);
+            $("#startID").click(function () {
+                $("#startID").prop("disabled",true);
+                $("#stopID").prop("disabled",false);
+                startId = setInterval(function () {
+                    index = Math.floor(Math.random() * 8)
+                    $("#img1ID").prop("src",imgs[index])
+                },20)
+            })
+
+
+            $("#stopID").click(function () {
+                $("#startID").prop("disabled",false);
+                $("#stopID").prop("disabled",true);
+                clearInterval(startId)
+                $("#img2ID").prop("src",imgs[index]).hide()/*隐藏*/
+                $("#img2ID").show(1000)/*显示*/
+
+            })
+
+        })
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+    <!--小相框-->
+    <div style="border-style:dotted;;width:160px;height:100px">
+        <img id="img1ID" src="img/1.jpg" style="width: 160px;height:100px">
+    </div>
+
+    <!--大相框-->
+    <div style="border-style:dotted;;width:800px;height:500px;position:absolute;left:500px;left:500px;top:10px">
+        <img id="img2ID" src="img/2.jpg" style="width: 800px;height:600px">
+    </div>
+
+    <!--开始按钮-->
+    <input id="startID" type="button" value="点击开始" style="width: 150px;height: 150px;font-size: 22px">
+
+    <!--停止按钮-->
+    <input id="stopID" type="button" value="点击停止" style="width: 150px;height: 150px;font-size: 22px">
+</body>
+</html>

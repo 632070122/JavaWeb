@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        /*基本格式*/
+        var person = {
+            "name":"abc",
+            "age":22
+        }
+
+        /*获取值*/
+        var name = person.name;
+        alert(name)
+
+        /*获取值*/
+        alert(person["name"])
+
+        /*遍历,获取所有的键和值*/
+        for(var key in person){
+            /*获取key*/
+            alert(key)
+            /*获取value*/
+            alert(person[key])
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

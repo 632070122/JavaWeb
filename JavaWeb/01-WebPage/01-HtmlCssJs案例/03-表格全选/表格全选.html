@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/表格全选.css">
+    <script src="js/表格全选.js"></script>
+</head>
+<body>
+<table>
+    <caption>学生信息表</caption>
+
+    <tr>
+        <th><input type="checkbox" name="cd" id="firstCb"></th>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+
+    <tr>
+        <th><input type="checkbox" name="cd"></th>
+        <td>1</td>
+        <td>令狐冲</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this)">删除</a></td>
+    </tr>
+
+    <tr>
+        <th><input type="checkbox" name="cd"></th>
+        <td>2</td>
+        <td>喜羊羊</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this)">删除</a></td>
+    </tr>
+</table>
+
+<div>
+    <input type="button" id="selectAll" value="全选">
+    <input type="button" id="unSelectAll" value="全不选">
+    <input type="button" id="selectRev" value="反选">
+</div>
+
+
+
+</body>
+</html>

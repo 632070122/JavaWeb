@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        /*定义对象,对象存储数据*/
+        var person = {
+            "persons":[
+                {"name":"aaa","age":22},
+                {"name":"bbb","age":22},
+                {"name":"ccc","age":22},
+            ]
+        }
+
+        /*获取值*/
+        var name = person.persons[2].name;
+        alert(name)
+
+        /*遍历,获取所有的键和值*/
+        for(var i = 0;i < person.persons.length;i++){
+            alert(person.persons[i].name +":"+ person.persons[i].age)
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

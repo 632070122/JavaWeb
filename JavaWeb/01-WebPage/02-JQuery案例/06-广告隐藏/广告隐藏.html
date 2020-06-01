@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+
+            setTimeout(adShow,3000);
+
+            setTimeout(adHide,8000);
+
+        })
+
+        function adShow() {
+            $("#ad").show("slow")
+        }
+        function adHide() {
+            $("#ad").hide("slow")
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <div>
+
+        <div id="ad" style="display: none">
+            <img style="width: 100%" src="img/1.PNG">
+        </div>
+        <div id="content">
+            正文部分
+        </div>
+
+    </div>
+</body>
+</html>
